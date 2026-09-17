@@ -102,3 +102,4 @@ console.log(compra * 0.8);
     console.log("compra sem desconto");
     
 }
+
