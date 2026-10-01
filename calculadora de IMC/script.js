@@ -5,8 +5,8 @@ const peso = document.getElementById("peso");
 
 const nomeresultado = document.getElementById("nomeResultado")
 const pesoresultado = document.getElementById("pesoResultado")
-const alturaresultado = document.getElementById("alturaresultado")
-const imcresultado = document.getElementById("IMCresultado")
+const alturaresultado = document.getElementById("alturaResultado")
+const boxResultado = document.getElementById("resultado")
 
 
 formulario.addEventListener("submit", function(event ){
@@ -29,7 +29,7 @@ let IMC =  valorpeso / (valoraltura * valoraltura)
 if (IMC < 18.5) {
     console.log("Abaixo do Peso");
     
-} else if ( IMC > 18.5 < 25) {
+} else if ( IMC > 18.5 && IMC < 25) {
     console.log("peso normal");
     
 }
@@ -46,9 +46,11 @@ else if (IMC > 30 && IMC < 35 ){
     
 }
 
+nomeresultado.textContent = valornome;
+pesoresultado.textContent = valorpeso;
+alturaresultado.textContent = valoraltura;
 
-
-
+boxResultado.style.display = "block";
 
 
 
